@@ -1,0 +1,8 @@
+Connection to database established: 2.5 points
+Question 1: 2.5/2.5 points
+Question 2: 2.5/2.5 points
+Question 3: 2.5/2.5 points
+Question 4: 2.5/2.5 points
+Question 5: 2.5/2.5 points
+
+Shape or index/column error for q6:
