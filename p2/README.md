@@ -11,18 +11,19 @@ rjemilo@wisc.edu
 - 22:11 23 Sep 2024: SQL queries might return generic dataframe objects! Please typecast them appropriately. For ex - Typecast columns with date information to pandas `Datetime` objects to pass the autograder. (You can use `autograder_beta.py` to get a more verbose output to figure out such inconsistencies)
 - 17:45 24 Sep 2024: Updating partner policy
 - 20:43 25 Sep 2024: Updating the q31 solution
-- 9:40 27 Sep 2024: Updating q15 sorting requirements (autograder will be fixed shortly)
-- 10:32 27 Sep 2024: Updating q21 sorting requirements (autograder will be fixed shortly)
-- 10:38 27 Sep 2024: Updating q23 & q24 sorting requirements (autograder will be fixed shortly)
-- 10:40 27 Sep 2024: Updating q25 sorting requirements (autograder will be fixed shortly)
-- 10:43 27 Sep 2024: Updating q27 sorting requirements and fixing existing requirements (autograder will be fixed shortly)
-- 10:45 27 Sep 2024: Updating q28 sorting requirements (autograder will be fixed shortly)
-- 10:49 27 Sep 2024: Updating q30 & q32 sorting requirements (autograder will be fixed shortly)
-- 10:52 27 Sep 2024: Updating q31 sorting requirements (autograder will be fixed shortly)
+- 9:40 27 Sep 2024: Updating q15 sorting requirements
+- 10:32 27 Sep 2024: Updating q21 sorting requirements
+- 10:38 27 Sep 2024: Updating q23 & q24 sorting requirements
+- 10:40 27 Sep 2024: Updating q25 sorting requirements
+- 10:43 27 Sep 2024: Updating q27 sorting requirements and fixing existing requirements
+- 10:45 27 Sep 2024: Updating q28 sorting requirements
+- 10:49 27 Sep 2024: Updating q30 & q32 sorting requirements
+- 10:52 27 Sep 2024: Updating q31 sorting requirements
 - 12:02 27 Sep 2024: Updating solution q15, 23, 24, 25, 27, 28, 30, 31
 - 14:11 27 Sep 2024: Updating q30, add `ExpenditureRank` requirement
 - 12:02 28 Sep 2024: Updating answer of q34
 - 21:01 28 Sep 2024: Updating question and answer of q34
+- 10:59 1 Oct 2024: Potential fix for Q23 sorting / collation issue
 
 ## Parter policy for this assignment
 
@@ -251,8 +252,19 @@ Now that you have the basic information and understanding of the database, you s
 
 **Requirements:** 
 * Your result should include album title `AlbumTitle`, and artist name `ArtistName`.
-* **IMPORTANT NOTE**: You may **NOT** use a regular join to answer this question. Instead, you **MUST** use `LEFT JOIN`.
+* **IMPORTANT NOTE:** You may **NOT** use a regular join to answer this question. Instead, you **MUST** use `LEFT JOIN`.
 * **UPDATED REQUIREMENT:** Your results should be ordered by ascending order of `AlbumTitle` and ascending order of `ArtistName`.
+* **UPDATED REQUIREMENT:** Please run the below two queries **before** your solution query.
+
+```python
+conn.execute(text("""
+    ALTER TABLE Album MODIFY Title VARCHAR(255) COLLATE utf8mb4_general_ci;
+"""))
+
+conn.execute(text("""
+    SET collation_connection = 'utf8mb4_general_ci';
+"""))
+```
 
 #### Q24: Retrieve a list of all artists and their corresponding albums, including artists who have not released any albums.
 
@@ -379,6 +391,6 @@ If your notebook is not named p2.ipynb, you can run:
 
 ## Submission
 
-This section will be updated by Monday, Sept 23rd.
+**Github Classroom Invitation Link: [https://classroom.github.com/a/1lhNtVba](https://classroom.github.com/a/1lhNtVba)**
 
 

@@ -1,8 +1,35 @@
 Connection to database established: 2.5 points
+[!] Missing question number comment identifier on first line of the cell containing SQL query: t = pd.read_sql("""
+    SELECT *
+    FROM Track
+""", conn)
+t 
+
 Question 1: 2.5/2.5 points
 Question 2: 2.5/2.5 points
 Question 3: 2.5/2.5 points
 Question 4: 2.5/2.5 points
 Question 5: 2.5/2.5 points
+Question 6: 2.5/2.5 points
+Question 7: 2.5/2.5 points
+Question 8: 2.5/2.5 points
+Question 9: 2.5/2.5 points
+Question 10: 2.5/2.5 points
+Question 11: 2.5/2.5 points
+Question 12: 2.5/2.5 points
+Question 13: 2.5/2.5 points
+Question 14: 2.5/2.5 points
+Question 15: 2.5/2.5 points
+Question 16: 2.5/2.5 points
+Question 17: 2.5/2.5 points
+Question 18: 2.5/2.5 points
+Question 19: 2.5/2.5 points
+Question 20: 2.5/2.5 points
+Question 21: 2.5/2.5 points
+Question 22: 2.5/2.5 points
+Question 23: 2.5/2.5 points
+Question 24: 2.5/2.5 points
+Question 25: 2.5/2.5 points
+Question 26: 2.5/2.5 points
 
-Shape or index/column error for q6:
+Shape or index/column error for q27:

@@ -94,9 +94,16 @@ def grade_notebook(notebook_path):
                   actual_output = pickle.load(ao)
               except FileNotFoundError:
                 out.write(f"[!] Missing/Incorrect pickle file name for question {question_number}\n")
-                
-              with open(f"answers/pkls/p{str(question_number)}.pkl", 'rb') as eo:
-                expected_output = pickle.load(eo)
+                print(f"Found #q{question_number} tag but couldn't open student's pkl. Continuing...")
+                continue
+              
+              try:
+                with open(f"answers/pkls/p{str(question_number)}.pkl", 'rb') as eo:
+                  expected_output = pickle.load(eo)
+              except FileNotFoundError:
+                out.write(f"[!!] Could not open answers/q{question_number}.pkl")
+                print(f"[!] Could not open answers/q{question_number}.pkl. Continuing")
+                continue
               
               total_score += assert_frame_equal_extended_diff(actual_output, 
                                                               expected_output,
