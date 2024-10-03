@@ -1,11 +1,4 @@
 Connection to database established: 2.5 points
-[!] Missing question number comment identifier on first line of the cell containing SQL query: t = pd.read_sql("""
-    SELECT GenreId, Name, a.Title
-    FROM Track t
-    JOIN Album a ON t.AlbumId = a.AlbumId
-""", conn)
-t 
-
 Question 1: 2.5/2.5 points
 Question 2: 2.5/2.5 points
 Question 3: 2.5/2.5 points
@@ -39,8 +32,8 @@ Question 30: 2.5/2.5 points
 Question 31: 2.5/2.5 points
 Question 32: 2.5/2.5 points
 Question 33: 2.5/2.5 points
-[!] Missing/Incorrect pickle file name for question 34
-[!] Missing/Incorrect pickle file name for question 35
+Question 34: 2.5/2.5 points
+Question 35: 2.5/2.5 points
 ---------------------------------------------------------------
- Total Score: 85.0/90.0
+ Total Score: 90.0/90.0
 ---------------------------------------------------------------
